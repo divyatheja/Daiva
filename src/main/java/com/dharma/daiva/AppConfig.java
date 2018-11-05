@@ -1,0 +1,32 @@
+/*package com.dharma.daiva;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
+import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+
+import javax.sql.DataSource;
+
+@Configuration
+@EnableWebMvc
+public class AppConfig {
+    @Autowired
+    DataSourceProperties dataSourceProperties;
+
+    @Bean
+    @ConfigurationProperties(prefix = DataSourceProperties.PREFIX)
+    DataSource realDataSource() {
+        DataSource dataSource = DataSourceBuilder
+                .create(this.dataSourceProperties.getClassLoader())
+                .url(this.dataSourceProperties.getUrl())
+                .username(this.dataSourceProperties.getUsername())
+                .password(this.dataSourceProperties.getPassword())
+                .build();
+        return dataSource;
+    }
+
+}*/
