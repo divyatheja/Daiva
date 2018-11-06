@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true )
 @Entity
 public class PaymentDetail {
-	@Id
+	
 	private int id;
 	
 	@OneToOne

@@ -38,18 +38,20 @@ public class HomeController {
 	
 	@GetMapping(value = "/oneVillager")
 	@ResponseBody
-	public List<Villager> getOneVillagers(@RequestParam("name") String name,
+	public Villager getOneVillagers(@RequestParam("name") String name,
 			@RequestParam("house") String house, Model model) {
 		Villager villager = new Villager();
 		villager = villagerRepository.findOneByNameAndHouse(name,house);
-	 	return (List<Villager>)villagerRepository.findAll();
+	 //	return (List<Villager>)villagerRepository.findAll();
+		return villager;
 	 	
 	}
 	
 	@PostMapping(value = "/addVillager")
 	@ResponseBody
 	public ResponseEntity<Villager> addVillager(Villager villager, Model model) {
-		 Villager saved = villagerRepository.save(villager);
+		Villager saved = new Villager();
+		saved = villagerRepository.save(villager);
 		return new ResponseEntity<Villager>(saved, HttpStatus.CREATED);
 	}
 	 
