@@ -18,20 +18,23 @@ public class Villager {
 	private String house;
 	private Long declaredAmount;
 	private Long paidAmount;
+	private String addedBy;
 	
 	public Villager() {
 		name = "";
 		house = "";
 		declaredAmount = 0L;
 		setPaidAmount(0L);
+		setAddedBy("");
 	}
 	
-	public Villager(String house, String name, Long declaredAmount, Long paidAmount) {
+	public Villager(String house, String name, Long declaredAmount, Long paidAmount, String addedBy) {
 		super();
 		this.house = house;
 		this.name = name;
 		this.declaredAmount = declaredAmount;
-		this.setPaidAmount(paidAmount);
+		this.paidAmount = paidAmount;
+		this.setAddedBy(addedBy);
 	}
 	public int getId() {
 		return id;
@@ -66,6 +69,14 @@ public class Villager {
 
 	public void setPaidAmount(Long paidAmount) {
 		this.paidAmount = paidAmount;
+	}
+
+	public String getAddedBy() {
+		return addedBy;
+	}
+
+	public void setAddedBy(String addedBy) {
+		this.addedBy = addedBy;
 	}
 	
 	}
