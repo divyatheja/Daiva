@@ -1,5 +1,6 @@
 package heroku_demo.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,16 +21,15 @@ public class HomeController {
 	private CommentRepository commentRepository;
 	
 	@GetMapping(value = {"/", "/index"})
-	@ResponseBody
 	public String openHomePage(Model model) {
-	/*	
-		model.addAttribute("comment", new Comment());
-		model.addAttribute("allComments", (List<Comment>)commentRepository.findAll());*/
+	 	
+		model.addAttribute("comment", new Villager());
+		model.addAttribute("allComments", new ArrayList<Villager>());
+		//model.addAttribute("allComments", (List<Villager>)commentRepository.findAll()); 
 		return "index";
 	}
 	
 	@GetMapping(value = {"/addVillager"})
-	@ResponseBody
 	public String addVillager(Model model) {
 	/*	
 		model.addAttribute("comment", new Comment());
