@@ -21,12 +21,22 @@ public class HomeController {
 	
 	@GetMapping(value = {"/", "/index"})
 	@ResponseBody
-	public Villager openHomePage(Model model) {
+	public String openHomePage(Model model) {
 	/*	
 		model.addAttribute("comment", new Comment());
 		model.addAttribute("allComments", (List<Comment>)commentRepository.findAll());*/
-		return new Villager();
+		return "index";
 	}
+	
+	@GetMapping(value = {"/addVillager"})
+	@ResponseBody
+	public String addVillager(Model model) {
+	/*	
+		model.addAttribute("comment", new Comment());
+		model.addAttribute("allComments", (List<Comment>)commentRepository.findAll());*/
+		return "addVillager";
+	}
+	 
 	
 /*	@PostMapping(value = {"/", "/index"})
 	public String addComment(@ModelAttribute("comment") Villager comment
