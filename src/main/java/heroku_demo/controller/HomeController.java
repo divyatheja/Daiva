@@ -29,7 +29,7 @@ public class HomeController {
 		return "index";
 	}
 	
-	@GetMapping(value = {"/addVillager"})
+	@GetMapping(value = "/addVillager")
 	public String addVillager(Model model) {
 	/*	
 		model.addAttribute("comment", new Comment());
