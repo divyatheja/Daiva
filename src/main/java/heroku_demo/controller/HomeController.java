@@ -24,8 +24,8 @@ public class HomeController {
 	public String openHomePage(Model model) {
 	 	
 		model.addAttribute("comment", new Villager());
-		model.addAttribute("allComments", new ArrayList<Villager>());
-		//model.addAttribute("allComments", (List<Villager>)commentRepository.findAll()); 
+		//model.addAttribute("allComments", new ArrayList<Villager>());
+		model.addAttribute("allComments", (List<Villager>)commentRepository.findAll()); 
 		return "index";
 	}
 	
