@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import heroku_demo.entity.PaymentDetail;
 import heroku_demo.entity.Villager;
-import heroku_demo.entity.VillagerRequest;
+//import heroku_demo.entity.VillagerRequest;
 import heroku_demo.repository.PaymentDetailRepository;
 import heroku_demo.repository.VillagerRepository;
 
