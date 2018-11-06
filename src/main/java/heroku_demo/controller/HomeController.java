@@ -8,8 +8,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import heroku_demo.entity.Comment;
+import heroku_demo.entity.Villager;
 import heroku_demo.repository.CommentRepository;
 
 @Controller
@@ -19,15 +20,16 @@ public class HomeController {
 	private CommentRepository commentRepository;
 	
 	@GetMapping(value = {"/", "/index"})
-	public String openHomePage(Model model) {
-		
+	@ResponseBody
+	public Villager openHomePage(Model model) {
+	/*	
 		model.addAttribute("comment", new Comment());
-		model.addAttribute("allComments", (List<Comment>)commentRepository.findAll());
-		return "index";
+		model.addAttribute("allComments", (List<Comment>)commentRepository.findAll());*/
+		return new Villager();
 	}
 	
-	@PostMapping(value = {"/", "/index"})
-	public String addComment(@ModelAttribute("comment") Comment comment
+/*	@PostMapping(value = {"/", "/index"})
+	public String addComment(@ModelAttribute("comment") Villager comment
 			, Model model) {
 		
 		commentRepository.save(comment);  // save to the database
@@ -35,5 +37,5 @@ public class HomeController {
 		model.addAttribute("allComments", (List<Comment>)commentRepository.findAll());
 		return "redirect:/index"; // redirects
 	}
-
+*/
 }
