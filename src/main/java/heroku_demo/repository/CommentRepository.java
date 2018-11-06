@@ -1,4 +1,4 @@
-package heroku_demo.repository;
+/*package heroku_demo.repository;
 
 import java.util.List;
 
@@ -11,3 +11,4 @@ public interface CommentRepository extends CrudRepository<Villager, Integer> {
 	List<Villager> findAll();
 
 }
+*/

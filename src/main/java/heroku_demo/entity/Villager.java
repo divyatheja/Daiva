@@ -10,8 +10,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true )
 @Entity
 public class Villager {
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	 @Id
+	 @GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	
 	private String name;
